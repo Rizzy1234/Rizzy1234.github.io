@@ -72,4 +72,22 @@ while (balls.length < 20) {
     randomRGB(),
     size,
     true
-  );
+  );balls.push(ball);
+}
+
+function loop() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
+  ctx.fillRect(0, 0, width, height);
+
+  for (let i = 0; i < balls.length; i++) {
+    if (balls[i].exist === true) {
+      balls[i].draw();
+      balls[i].update();
+      balls[i].collision();
+    }
+  }
+
+  requestAnimationFrame(loop);
+}
+
+loop();

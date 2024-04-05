@@ -60,4 +60,16 @@ class Ball {
       }
     }
   }
-}
+}const balls = [];
+
+while (balls.length < 20) {
+  const size = random(10, 20);
+  const ball = new Ball(
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-1, 10),
+    random(-1, 10),
+    randomRGB(),
+    size,
+    true
+  );

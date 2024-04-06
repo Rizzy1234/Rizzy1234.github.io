@@ -7,7 +7,8 @@ const ctx = canvas.getContext("2d");
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
-
+let count1=0;
+let count2=0
 // function to generate random number
 
 function random(min, max) {
@@ -88,6 +89,8 @@ function loop() {
   }
 
   requestAnimationFrame(loop);
+  para1.textContent = "Player 1 ball count: " + count1;
+  para2.textContent = "Player 2 ball count: " + count1;
 }
 
 loop();
